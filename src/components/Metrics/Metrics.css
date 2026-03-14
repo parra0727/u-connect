@@ -1,0 +1,222 @@
+.metrics {
+  background: var(--black);
+  position: relative;
+}
+
+.metrics__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 60% at 20% 50%, rgba(37,99,235,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.metrics__subtitle {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  margin-top: 48px;
+  margin-bottom: 20px;
+}
+
+/* Grid inversión */
+.metrics__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.metrics__card {
+  background: var(--black-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.metrics__card:hover {
+  border-color: var(--blue);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(37,99,235,0.1);
+}
+
+.metrics__pct {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.metrics__bar {
+  height: 4px;
+  background: var(--black-3);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.metrics__bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  opacity: 0.7;
+}
+
+.metrics__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.metrics__hint {
+  font-size: 12px;
+  color: var(--gray-mid);
+  transition: var(--transition);
+}
+.metrics__card:hover .metrics__hint {
+  color: var(--blue-light);
+}
+
+/* Metas + Ofertas */
+.metrics__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.metrics__block {
+  background: var(--black-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.metrics__block-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.metrics__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metrics__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--gray-light);
+  line-height: 1.5;
+}
+
+.metrics__check {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(37,99,235,0.15);
+  color: var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Más que capital */
+.metrics__allies {
+  background: var(--black-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.metrics__allies-text {
+  font-size: 15px;
+  color: var(--gray-light);
+  margin-bottom: 20px;
+  line-height: 1.65;
+}
+
+.metrics__allies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.metrics__ally {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--gray-soft);
+}
+
+.metrics__allies-closing {
+  font-size: 15px;
+  color: var(--gray-light);
+  line-height: 1.65;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.metrics__allies-closing strong {
+  color: var(--white);
+}
+
+/* Modal */
+.metrics__modal-pct {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.metrics__modal-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.metrics__modal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.metrics__modal-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--gray-soft);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .metrics__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .metrics__grid { grid-template-columns: 1fr; }
+  .metrics__bottom { grid-template-columns: 1fr; }
+  .metrics__allies-grid { grid-template-columns: 1fr; }
+}
