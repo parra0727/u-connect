@@ -107,7 +107,7 @@ export default function Metrics() {
           <span className="section-tag">Inversión</span>
           <h2 className="section-title">
             Capital semilla<br />
-            <span className="text-gradient">USD $80,000 – $150,000</span>
+            <span className="text-gradient">USD $30,000 – $50,000</span>
           </h2>
           <p className="section-sub">
             Etapa temprana en LATAM. Producto desarrollado internamente,
